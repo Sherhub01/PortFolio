@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import Services from './pages/Services'
 import Project from './pages/Project'
 import Blog from './pages/Blog'
+import SingleBlog from './pages/SingleBlog'
 import Gallery from './pages/Gallery'
 import Shop from './pages/Shop'
 import Contact from './pages/Contact'
@@ -55,6 +56,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Project />} />
         <Route path="/blogs" element={<Blog />} />
+        <Route path="/blogs/:slug" element={<SingleBlog />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />

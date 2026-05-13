@@ -28,14 +28,13 @@ export default function Footer() {
         </ul>
 
         <ul className="hero_social">
-          <li><a href="https://x.com/home"><FaTwitter /></a></li>
-          <li><a href="https://www.instagram.com/deepakgupta_8172/?igsh=MTQxZnZvdzYydDMwNg%3D%3D#"><FaInstagram /></a></li>
-          <li><a href="https://www.linkedin.com/in/deepak-gupta-633b00286/" target="_blank" rel="noopener noreferrer"><GrLinkedinOption /></a></li>
-          <li><a href="https://github.com/DeepakGupta4"><FaGithub /></a></li>
+          <li><a href="https://www.instagram.com/__serenesoul01?igsh=NmFmeWp2cm9hOXVs&utm_source=qr"><FaInstagram /></a></li>
+          <li><a href="https://www.linkedin.com/in/sherali01/" target="_blank" rel="noopener noreferrer"><GrLinkedinOption /></a></li>
+          <li><a href="https://github.com/Sherhub01"><FaGithub /></a></li>
         </ul>
 
         <div className="copyrights">
-          &copy; 2025 All Right Reserved By <span>DeepakGupta</span>
+          &copy; 2025 All Right Reserved By <span>Sher Ali</span>
         </div>
       </div>
     </footer>

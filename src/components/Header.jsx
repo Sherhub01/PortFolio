@@ -53,7 +53,7 @@ export default function Header() {
         <nav className="container flex flex-sb">
           <div className="logo flex gap-2">
             <Link to="/">
-              <h2>Deepak Gupta</h2>
+              <h2>Sher Ali</h2>
             </Link>
           </div>
           <div className="navlist flex gap-2">
@@ -141,7 +141,7 @@ export default function Header() {
             ></span>
             <div className="mobilelogo">
               {/* <img src="/img/white.png" alt="logo" /> */}
-              <h2>Deepak Gupta</h2>
+              <h2>Sher Ali</h2>
             </div>
             <ul
               className="flex gap-1 flex-col flex-left mt-3"
@@ -211,7 +211,7 @@ export default function Header() {
                 </Link>
               </li>
             </ul>
-            <p>Copyright &copy; 2025 | Deepak</p>
+            <p>Copyright &copy; 2025 | Sher Ali</p>
           </div>
         </nav>
       </header>

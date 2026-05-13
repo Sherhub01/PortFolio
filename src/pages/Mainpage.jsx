@@ -7,8 +7,6 @@ import { LiaBasketballBallSolid } from "react-icons/lia";
 import { GoArrowUpRight } from "react-icons/go";
 import { LuMedal } from "react-icons/lu";
 import { PiGraduationCap } from "react-icons/pi";
-import firstImg from '../../public/assets/b.JPG';
-import secondImg from '../../public/b.JPG'
 // import Spinner from "./components/Spinner";
 // import "./index.css";
 import AOS from "aos";
@@ -40,7 +38,7 @@ export default function Home() {
     }
   ];
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [alldata, setAlldata] = useState([]);
   const [allProjects, setAllProjects] = useState([]);
   const [allwork, setAllwork] = useState([]);
@@ -50,18 +48,50 @@ export default function Home() {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        // Replace with your actual API endpoints
-        const [projectResponse, blogResponse] = await Promise.all([
-          fetch('/api/projects'),
-          fetch('/api/blogs')
-        ]);
-
-        const projecData = await projectResponse.json();
-        const blogsData = await blogResponse.json();
-        setAlldata(projecData);
-        setAllwork(blogsData);
+        // Using dummy project highlight data instead of generic blog calls
+        const dummyBlogData = [
+          {
+            _id: "1",
+            title: "Personal Portfolio Website",
+            slug: "portfolio-website",
+            images: ["/assets/Portfolio.png"],
+            blogcategory: ["Website"],
+            createdAt: new Date().toISOString(),
+            description: "A polished portfolio experience highlighting my skills, case studies, and service offerings.",
+          },
+          {
+            _id: "2",
+            title: "Arveeta Jewellery Website",
+            slug: "arveeta-jewellery",
+            images: ["/assets/arveeta.png"],
+            blogcategory: ["E-commerce"],
+            createdAt: new Date().toISOString(),
+            description: "A premium storefront design built for seamless product discovery and elegant brand storytelling.",
+          },
+          {
+            _id: "3",
+            title: "Design System for Dashboard",
+            slug: "dashboard-design-system",
+            images: ["/assets/designDashboard.png"],
+            blogcategory: ["Design"],
+            createdAt: new Date().toISOString(),
+            description: "A modern dashboard system focused on clarity, consistency, and improved data visualization.",
+          },
+          {
+            _id: "4",
+            title: "LMS Platform UI",
+            slug: "lms-platform",
+            images: ["/assets/lms.png"],
+            blogcategory: ["Education"],
+            createdAt: new Date().toISOString(),
+            description: "A student-friendly LMS interface designed for intuitive navigation and course engagement.",
+          },
+        ];
+        
+        setAlldata([]);
+        setAllwork(dummyBlogData);
       } catch (error) {
-        console.error('Error fetching Data ', error);
+        console.error('Error setting Data ', error);
       } finally {
         setLoading(false);
       }
@@ -71,9 +101,9 @@ export default function Home() {
 
   useEffect(() => {
     if (selectedCategory === 'All') {
-      setFilteredProjects(alldata.filter(pro => pro.status === 'publish'));
+      setFilteredProjects([]);
     } else {
-      setFilteredProjects(alldata.filter(pro => pro.status === 'publish' && pro.projectcategory[0] === selectedCategory));
+      setFilteredProjects([]);
     }
   }, [selectedCategory, alldata]);
 
@@ -131,20 +161,26 @@ export default function Home() {
     {
       _id: "1",
       title: "Personal Portfolio Website",
-      images: ["./assets/Portfolio.png"],
+      images: ["/assets/Portfolio.png"],
       category: "Website Development",
     },
     {
       _id: "2",
-      title: "My Friend Shop Website",
-      images: ["./assets/friendshop.png"],
+      title: "Arveeta Jewellery Website",
+      images: ["/assets/arveeta.png"],
       category: "Website Development",
     },
     {
       _id: "3",
       title: "Design System for Dashboard",
-      images: ["./assets/desindashboard.png"],
+      images: ["/assets/designDashboard.png"],
       category: "Design System",
+    },
+    {
+      _id: "4",
+      title: "Vetician Project",
+      images: ["/assets/Vetician.png"],
+      category: "Website Development",
     },
   ];
 
@@ -153,8 +189,7 @@ export default function Home() {
     setTimeout(() => {
       setAllProjects(dummyProjects);
       setFilteredProjects(dummyProjects);
-      setLoading(false);
-    }, 1000);
+    }, 500);
   }, []);
 
   useEffect(() => {
@@ -177,7 +212,7 @@ export default function Home() {
        
       </Head> */}
 
-      <title>Deepak Gupta - Portfolio</title>
+      <title>Sher Ali - Portfolio</title>
 
       {/* Hero Section */}
       <section className="hero">
@@ -190,33 +225,32 @@ export default function Home() {
         <div className="container">
           <div className="flex w-100">
             <div className="heroinfoleft">
-              <span className="hero_sb_title" data-aos="fade-left">I am Deepak Gupta</span>
+              <span className="hero_sb_title" data-aos="fade-left">I am Sher Ali</span>
               <h1 className="hero_title aos-init aos-animate" data-aos="fade-right">
                 Mern Developer + <br />
                 <span className="typed-text text-blue-600">{text}</span>
                 <span className="typed-cursor text-blue-600">|</span>
               </h1>
               <div className="hero_img_box heroimgbox" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="4000">
-              <img src={firstImg} alt="coder" />
+              <img src="/profile.jpeg" alt="coder" />
               </div>
               <div className="lead" data-aos="fade-up">
                 I specialize in crafting comprehensive digital solutions, seamlessly integrating my expertise as a software engineer, web developer, full-stack developer, and content creator.
               </div>
               <div className="hero_btn_box" data-aos="fade-up">
-                <a href="../../public/Deepak Gupta Resume.pdf" download className="download_cv">
+                <a href="\src\assets\My_Resume.pdf" download className="download_cv">
                   Download CV <BiDownload />
                 </a>
                 <ul className="hero_social">
-                  <li><a href="https://www.instagram.com/deepakgupta_8172/?igsh=MTQxZnZvdzYydDMwNg%3D%3D#"><FaInstagram /></a></li>
-                  <li><a href="https://www.linkedin.com/in/deepak-gupta-633b00286/"><GrLinkedinOption /></a></li>
-                  <li><a href="https://github.com/DeepakGupta4"><FaGithub /></a></li>
-                  <li><a href="https://x.com/home"><FaTwitter /></a></li>
+                  <li><a href="https://www.instagram.com/__serenesoul01?igsh=NmFmeWp2cm9hOXVs&utm_source=qr"><FaInstagram /></a></li>
+                  <li><a href="https://www.linkedin.com/in/sherali01/"><GrLinkedinOption /></a></li>
+                  <li><a href="https://github.com/Sherhub01"><FaGithub /></a></li>
                 </ul>
               </div>
             </div>
             <div className="heroimageright">
               <div className="hero_img_box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-              <img src={secondImg} alt="coder" />
+              <img src="/profile.jpeg" alt="coder" />
               </div>
             </div>
           </div>
@@ -359,15 +393,15 @@ export default function Home() {
                 <h3>Higher Secondary Education</h3>
                 <p>Navjeewan Inter College Patherwa Kushinagar</p>
               </div>
-              <div className="exper_card">
+              {/* <div className="exper_card">
                 <span>2019-2022</span>
                 <h3>Diploma </h3>
                 <p>SIRT Bhopal</p>
-              </div>
+              </div> */}
               <div className="exper_card">
-                <span>2022-2025</span>
+                <span>2022-2026</span>
                 <h3>B.Tech</h3>
-                <p>SAM Global University</p>
+                <p>Maharishi Dayanand University</p>
               </div>
               
             </div>
@@ -384,13 +418,13 @@ export default function Home() {
           </div>
           <div className="myskils_cards">
             {[
-              { name: "Python", img: "/assets/python.jpeg", percent: "25%" },
+              { name: "Python", img: "/assets/python.jpeg", percent: "33%" },
               { name: "Express", img: "/assets/express.svg", percent: "77%" },
               { name: "C++", img: "/assets/c++.png", percent: "40%" },
               { name: "MongoDB", img: "/assets/mongodb.svg", percent: "90%" },
               // { name: "Premiere pro", img: "/assets/9.svg", percent: "80%" },
               // { name: "Kotlin", img: "/assets/kotlin.svg", percent: "97%" },
-              { name: "Node", img: "/assets/nodejs.png", percent: "90%" },
+              { name: "Node", img: "/assets/nodejs.png", percent: "70%" },
               { name: "JavaScript", img: "/assets/js.svg", percent: "75%" },
               // { name: "Unreal engine 5", img: "/assets/7.svg", percent: "50%" },
               { name: "React", img: "/assets/react.svg", percent: "80%" },
@@ -419,23 +453,24 @@ export default function Home() {
       <section className="recentblogs">
         <div className="container" data-aos="fade-up" >
           <div className="myskills_title">
-            <h2>Recent Blogs</h2>
-            <p>We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers</p>
+            <h2>About My Projects</h2>
+            <p>Explore a few of my recent project highlights, each built with strong visuals, thoughtful UX, and real-world value.</p>
           </div>
           <div className="recent_blogs">
-            {allwork.slice(0, 3).map((blog) => (
-              <Link to={`/blogs/${blog.slug}`} key={blog._id} className="re_blog">
+            {allwork.slice(0, 3).map((project) => (
+              <Link to="/projects" key={project._id} className="re_blog">
                 <div className="re_blogimg">
-                  <img src={blog.images[0] || '/img/noimage.png'} alt={blog.title} />
-                  <span>{blog.blogcategory[0]}</span>
+                  <img src={project.images[0] || '/assets/noimage.png'} alt={project.title} />
+                  <span>{project.blogcategory[0]}</span>
                 </div>
                 <div className="re_bloginfo">
                   <div className="re_topdate flex gap-1">
                     <div className="res_date">
-                      <FaCalendarDays /> <span>{formatDate(new Date(blog.createdAt))}</span>
+                      <FaCalendarDays /> <span>{formatDate(new Date(project.createdAt))}</span>
                     </div>
                   </div>
-                  <h2>{blog.title}</h2>
+                  <h2>{project.title}</h2>
+                  <p>{project.description}</p>
                 </div>
               </Link>
             ))}

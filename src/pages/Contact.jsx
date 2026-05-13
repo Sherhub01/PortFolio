@@ -87,11 +87,11 @@ export default function Contact() {
                         <p>We love questions and feedback and we're always happy to help!</p>
                         <div className="leftsociinfo">
                             <ul>
-                                <li><FaPhoneVolume /> <span>Phone: <a href="tel:+91-9369560031" target="_blank">+91-9369560031</a></span></li>
-                                <li><MdEmail /> <span>Email: <a href="mailto:dkguptak9369@gmail.com" target="_blank">dkguptak9369@gmail.com</a></span></li>
-                                <li><FaGithub /> <span>Github: <a href="https://github.com/DeepakGupta4" target="_blank">Deepak Gupta</a></span></li>
-                                <li><GrLinkedin /> <span>Linkedin: <a href="https://www.linkedin.com/in/deepak-gupta-633b00286/" target="_blank">Deepak Gupta</a></span></li>
-                                <li><FaInstagram /> <span>Instagram: <a href="https://www.instagram.com/deepakgupta_8172?igsh=MTQxZnZvdzYydDMwNg==" target="_blank">Deepak Gupta</a></span></li>
+                                <li><FaPhoneVolume /> <span>Phone: <a href="tel:+91-9971177870" target="_blank">+91-9971177870</a></span></li>
+                                <li><MdEmail /> <span>Email: <a href="mailto:sherali03012002@gmail.com" target="_blank">sherali03012002@gmail.com</a></span></li>
+                                <li><FaGithub /> <span>Github: <a href="https://github.com/Sherhub01" target="_blank">Sher Ali</a></span></li>
+                                <li><GrLinkedin /> <span>Linkedin: <a href="https://www.linkedin.com/in/sherali01" target="_blank">Sher Ali</a></span></li>
+                                <li><FaInstagram /> <span>Instagram: <a href="https://www.instagram.com/__serenesoul01?igsh=NmFmeWp2cm9hOXVs&utm_source=qr" target="_blank">Sher Afli</a></span></li>
                             </ul>
                         </div>
                     </div>

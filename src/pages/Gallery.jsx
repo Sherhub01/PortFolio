@@ -15,76 +15,90 @@ export default function gallery() {
       try {
         // Dummy data simulate
         const dummyData = [
-          {
-            _id: "1",
-            title: " Photo",
-            slug: "sunset-photo",
-            images: ["/assets/newimg1.jpg"],
-            category: "Nature",
-          },
-          {
-            _id: "2",
-            title: " Photo",
-            slug: "mountain-photo",
-            images: ["/assets/f.JPG"],
-            category: "Adventure",
-          },
+          // {
+          //   _id: "1",
+          //   title: "Photo A",
+          //   slug: "photo-a",
+          //   images: ["/assets/a.jpeg"],
+          //   category: "Nature",
+          // },
+          // {
+          //   _id: "2",
+          //   title: "Photo B",
+          //   slug: "photo-b",
+          //   images: ["/assets/b.jpeg"],
+          //   category: "Adventure",
+          // },
           {
             _id: "3",
-            title: "Photo",
-            slug: "city-lights",
-            images: ["/assets/g.JPG"],
+            title: "Photo C",
+            slug: "photo-c",
+            images: ["/assets/c.jpeg"],
             category: "Urban",
           },
           {
-            _id: "3",
-            title: "Photo",
-            slug: "city-lights",
-            images: ["/assets/h.JPG"],
+            _id: "4",
+            title: "Photo D",
+            slug: "photo-d",
+            images: ["/assets/d.jpeg"],
             category: "Urban",
           },
           {
-            _id: "3",
-            title: "Photo",
-            slug: "city-lights",
-            images: ["/assets/i.JPG"],
+            _id: "5",
+            title: "Photo E",
+            slug: "photo-e",
+            images: ["/assets/e.jpeg"],
             category: "Urban",
           },
           {
-            _id: "3",
-            title: "Photo",
-            slug: "city-lights",
-            images: ["/assets/j.JPG"],
+            _id: "6",
+            title: "Photo F",
+            slug: "photo-f",
+            images: ["/assets/f.jpeg"],
             category: "Urban",
           },
           {
-            _id: "3",
-            title: "Photo",
-            slug: "city-lights",
-            images: ["/assets/d.JPG"],
+            _id: "7",
+            title: "Photo G",
+            slug: "photo-g",
+            images: ["/assets/g.jpeg"],
             category: "Urban",
           },
           {
-            _id: "3",
-            title: "Photo",
-            slug: "city-lights",
-            images: ["/assets/newimg2.jpg"],
+            _id: "8",
+            title: "Photo H",
+            slug: "photo-h",
+            images: ["/assets/h.jpeg"],
             category: "Urban",
           },
           {
-            _id: "3",
-            title: "Photo",
-            slug: "city-lights",
-            images: ["/assets/newimg3.jpg"],
+            _id: "9",
+            title: "Photo I",
+            slug: "photo-i",
+            images: ["/assets/i.jpeg"],
             category: "Urban",
           },
           // {
-          //   _id: "3",
-          //   title: "Photo",
-          //   slug: "city-lights",
-          //   images: ["/assets/newimg4.jpg"],
-          //   category: "Urban",
+          //   _id: "10",
+          //   title: "Photo J",
+          //   slug: "photo-j",
+          //   images: ["/assets/j.jpeg"],
+          //   category: "Nature",
           // },
+          {
+            _id: "11",
+            title: "Photo K",
+            slug: "photo-k",
+            images: ["/assets/k.jpeg"],
+            category: "Adventure",
+          },
+          {
+            _id: "12",
+            title: "Photo L",
+            slug: "photo-l",
+            images: ["/assets/l.jpeg"],
+            category: "Urban",
+          },
         ];
         
         // Simulating API response delay
@@ -119,26 +133,26 @@ export default function gallery() {
 
   return (
     <>
-      <title>Deepak : Gallery Photos</title>
+      <title>Sher Ali : Gallery Photos</title>
 
       <div className="gallerypage">
         <div className="container">
           <div className="gallerytopsec">
             <div className="topphonesec">
               <div className="lefttitlesec">
-                <h4>Deepak GALLERY PHOTOS</h4>
+                <h4>Sher's GALLERY PHOTOS</h4>
                 <h1>
-                  DEEPAK <br /> photographes
+                  Sher Ali <br /> photographes
                 </h1>
                 <a href="#galleryimages">
                   <button>VIEW MORE</button>
                 </a>
               </div>
               <div className="rightimgsec">
-                <img src="assets/g.JPG" alt="" />
+                <img src="/assets/c.jpeg" alt="" />
                 <div className="r_img_top">
-                  <img src="../assets/c.JPG" alt="" />
-                  <img src="../assets/e.JPG" alt="" />
+                  <img src="/assets/d.jpeg" alt="" />
+                  <img src="/assets/e.jpeg" alt="" />
                 </div>
               </div>
             </div>
@@ -151,7 +165,7 @@ export default function gallery() {
                 <span>01//</span>OUR PORTFOLIO
               </h3>
               <h2>
-                Deepak's capture<span> All of your</span>
+                Sher's capture<span> All of your</span>
                 <br />
                 beautiful memories
               </h2>
@@ -170,7 +184,7 @@ export default function gallery() {
                       <img src={photo.images[0]} alt={photo.title} />
                       <div className="galeryimgiteminfo">
                         <h2>{photo.title}</h2>
-                        <p>by Deepak Gupta</p>
+                        <p>by Sher Ali</p>
                       </div>
                     </div>
                   ))}
