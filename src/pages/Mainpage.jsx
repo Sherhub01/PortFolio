@@ -356,12 +356,12 @@ export default function Home() {
             </div>
             <div className="exper_cards">
               <div className="exper_card">
-                <span>2025-Present</span>
+                <span>2026-Present</span>
                 <h3>Freelance</h3>
                 <p>Full Stack App/Web Developer</p>
               </div>
               <div className="exper_card">
-                <span>2024-Present</span>
+                <span>2025-Present</span>
                 <h3>Freelance</h3>
                 <p> Video Editor</p>
               </div>
